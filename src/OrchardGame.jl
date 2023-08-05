@@ -1,9 +1,14 @@
 module OrchardGame
 
 # Write your package code here.
-export Game
+export Game,
+    oneTurn!,
+    finishGame!,
+    oneSim
 
 include("Types.jl")
+include("gameFuns.jl")
+
 
 
 
