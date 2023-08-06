@@ -8,6 +8,9 @@ end
 
 isOver(g::Game) = g.isOver
 
+"""
+If the basket is rolled, a player can choose a fruit ad libitum. This function returns realises this. Returns an integer (position) of a fruit in the orchard. This uses the function in the `stategy` slot of the `Game` supplied.
+"""
 function basketPick(g::Game)
     return g.strategy(g)
 end
@@ -33,6 +36,9 @@ function pickMin(g::Game)
     return findfirst(x -> x == chFruit, g.orchard)
 end
 
+function pickRand(g::Game)
+    return rand(1:length(g.orchard))
+end
 
 
 
